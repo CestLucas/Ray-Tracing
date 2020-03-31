@@ -1,3 +1,6 @@
+![Image of Ray-Tracing Balls](https://github.com/CestLucas/Ray-Tracing/blob/master/MyRenders/balls.png)
+![Image of Ray-Tracing Balls](https://github.com/CestLucas/Ray-Tracing/blob/master/MyRenders/holographic_christmas.png)
+
 This is a simple ray-tracing program using C++ and openGL.
 
 Features completed:
