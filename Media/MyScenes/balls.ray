@@ -1,0 +1,221 @@
+# author: Gao
+
+Background {
+	# Color of the background 
+	color 1.0 1.0 1.0 # white
+	# white light
+	ambientLight 1 1 1 
+}
+
+Camera {
+	eye 0 0 0
+	lookAt 10 0 0
+	up 0 0 1
+	fovy 45
+}
+
+Lights {
+	Light {
+		position 19 -9 9
+		color 1 1 1
+ 	}
+	Light {
+		position 19 9 9
+		color 1 1 1
+	}
+	Light {
+		position 3 0 0
+		color 1 1 1
+ 	}
+}
+
+Materials {
+	Material {
+		textureFilename ../Project_3/Media/MyScenes/wall.jpg
+		diffuseColor 0.5 0.5 0.5
+		specularColor 0.5 0.5 0.5
+		reflectiveColor 0 0 0
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+	Material {
+		textureFilename ../Project_3/Media/MyScenes/basketball.jpg
+		diffuseColor 0.3 0.3 0.3
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0 0 0
+		shininess 30
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+	Material {
+		textureFilename NULL
+		diffuseColor 0.1 0.1 0.1  
+		specularColor 0.1 0.1 0.1 
+		reflectiveColor 0.5 0.5 0.5
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+	Material {
+		textureFilename NULL
+		diffuseColor 0.1 0.1 0.1
+		specularColor 0.1 0.1 0.1
+		reflectiveColor 0.1 0.1 0.1
+		shininess 50
+		transparentColor 0.9 0.9 0.9
+		indexOfRefraction 0.2
+	}
+}
+
+Group {
+	Sphere {
+		materialIndex 3
+		center 18 -4 -1
+		radius 4
+	}
+	Sphere {
+		materialIndex 2
+		center 10 0 -3
+		radius 2
+	}
+	Sphere {
+		materialIndex 1
+		center 16 5 -3
+		radius 2
+	}
+	# bottom wall
+	Triangle {
+		vertex0 -10 -10 -5
+		vertex1 20 -10 -5
+		vertex2 20 10 -5
+		
+		tex_xy_0 1 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 -10 -10 -5
+		vertex1 20 10 -5
+		vertex2 -10 10 -5
+		tex_xy_0 1 0
+		tex_xy_1 0 1
+		tex_xy_2 0 0
+		materialIndex 0
+	}
+	# front wall
+	Triangle {
+		vertex0 20 -10 -5
+		vertex1 20 -10 10
+		vertex2 20 10 10
+		tex_xy_0 1 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 20 -10 -5
+		vertex2 20 10 10
+		vertex1 20 10 -5
+		tex_xy_0 1 0
+		tex_xy_1 0 1
+		tex_xy_2 0 0
+		materialIndex 0
+	}
+	# back wall
+	Triangle {
+		vertex0 -10 -10 -5
+		vertex1 -10 10 10
+		vertex2 -10 -10 10
+		tex_xy_0 1 0
+		tex_xy_1 0 1
+		tex_xy_2 1 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 -10 -10 -5
+		vertex1 -10 10 -5
+		vertex2 -10 10 10
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+	# left wall
+	Triangle {
+		vertex0 20 10 -5
+		vertex1 20 10 10
+		vertex2 -10 10 10
+		tex_xy_0 1 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 20 10 -5
+		vertex1 -10 10 10
+		vertex2 -10 10 -5
+		tex_xy_0 1 0
+		tex_xy_1 0 1
+		tex_xy_2 0 0
+		materialIndex 0
+	}
+	# right wall
+	Triangle {
+		vertex0 20 -10 -5
+		vertex1 -10 -10 10
+		vertex2 20 -10 10
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 20 -10 -5
+		vertex1 -10 -10 -5
+		vertex2 -10 -10 10
+		tex_xy_0 0 0
+		tex_xy_1 1 0
+		tex_xy_2 1 1
+		materialIndex 0
+	}
+	# upper wall
+	Triangle {
+		vertex0 -10 10 10
+		vertex1 20 10 10
+		vertex2 20 -10 10
+		tex_xy_0 0 0 
+		tex_xy_1 0 1
+		tex_xy_2 1 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 -10 10 10
+		vertex1 20 -10 10
+		vertex2 -10 -10 10
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 1 0
+		materialIndex 0
+	}
+	# floor
+	Triangle {
+		vertex0 -10 10 -5
+		vertex1 20 -10 -5
+		vertex2 20 10 -5
+		tex_xy_0 0 0 
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 -10 10 -5
+		vertex1 -10 -10 -5
+		vertex2 20 -10 -5
+		tex_xy_0 0 0
+		tex_xy_1 1 0
+		tex_xy_2 1 1
+		materialIndex 0
+	}
+}
